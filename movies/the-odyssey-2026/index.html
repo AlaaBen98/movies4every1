@@ -220,6 +220,37 @@
       .info-grid { grid-template-columns: 1fr; }
       .panel { padding: 21px; }
     }
+    
+/* Advertisement placements on movie pages */
+.ad-slot {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  margin: 25px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ad-slot.has-ad {
+  display: block;
+  min-height: 90px;
+}
+
+.ad-placeholder {
+  display: none;
+}
+
+.ad-slot iframe,
+.ad-slot img {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .ad-slot.has-ad {
+    min-height: 50px;
+  }
+}
+
   </style>
 </head>
 
@@ -230,9 +261,16 @@
     <a class="logo" href="/">MOVIES<span>4</span>EVER1</a>
     <a class="back" href="/">← Back to Movies</a>
   </div>
+
 </header>
 
+<!-- AD PLACEMENT 1: MOVIE PAGE TOP -->
+<div class="ad-slot ad-movie-top" id="ad-movie-top">
+  <div class="ad-placeholder">Advertisement</div>
+</div>
+
 <main>
+
 
   <section class="hero">
     <div class="container hero-content">
